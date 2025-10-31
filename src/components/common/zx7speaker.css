@@ -1,0 +1,53 @@
+.zx7_display {
+  background: url("/assets/speaker-zx7.jpg");
+  background-position: contain;
+  width: 1110px;
+  height: 320px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  justify-content: center;
+  padding-left: 70px;
+  border-radius: 8px;
+  gap: 25px;
+}
+
+.zx7_display .heading {
+  color: #000000;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.zx7_display button {
+  width: 160px;
+  height: 48px;
+  font-family: inherit;
+  border: 1px solid #000000;
+  background-color: inherit;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.zx7_display button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .zx7_display {
+    /* margin-top: -70px;
+    height: 527px;
+    border-radius: 8px;
+    width: 90%;
+    background-size: 761px 350px; */
+    width: 90%;
+    background-position: -200px top;
+    background-size: cover;
+  }
+}
