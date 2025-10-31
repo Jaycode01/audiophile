@@ -1,0 +1,139 @@
+.product_categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-family: "Manrope";
+  width: 1110px;
+  margin: 200px auto;
+}
+
+.product_categories .category {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  position: relative;
+  width: 350px;
+  height: 204px;
+}
+
+.product_categories .category:first-child .visual {
+  width: 122.95px;
+  height: 160px;
+  position: absolute;
+  left: 113.68px;
+  top: -90px;
+}
+
+.product_categories .category:nth-child(2) .visual {
+  width: 121.49px;
+  position: absolute;
+  left: 113.52px;
+  height: 146px;
+  top: -75px;
+}
+
+.product_categories .category:nth-child(3) .visual {
+  width: 178px;
+  height: 161px;
+  position: absolute;
+  left: 88px;
+  top: -90px;
+}
+
+.category .name {
+  margin-top: 40px;
+  font-size: 18px;
+  letter-spacing: 1.29px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+}
+
+.category button {
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  background-color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.category button span {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0.5;
+  letter-spacing: 1px;
+  color: #000000;
+  transition: color 0.5s ease;
+}
+
+.category button:hover span {
+  color: #d87d4a;
+}
+
+@media (max-width: 768px) {
+  .product_categories {
+    width: 689px;
+    margin: 125px auto;
+  }
+
+  .product_categories .category {
+    width: 223px;
+    height: 165px;
+  }
+
+  .product_categories .category:first-child .visual {
+    width: 79.92px;
+    height: 104px;
+    left: 73.2px;
+    top: -60px;
+  }
+
+  .product_categories .category:nth-child(2) .visual {
+    width: 84.04px;
+    height: 101px;
+    left: 69.52px;
+    top: -60px;
+  }
+
+  .product_categories .category:nth-child(3) .visual {
+    width: 147px;
+    height: 133px;
+    left: 38px;
+  }
+
+  .category .name {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  .product_categories {
+    grid-template-columns: 1fr;
+    gap: 80px;
+    width: 327px;
+  }
+
+  .product_categories .category {
+    width: 100%;
+  }
+
+  .product_categories .category:first-child .visual {
+    left: 124px;
+  }
+
+  .product_categories .category:nth-child(2) .visual {
+    left: 121px;
+  }
+
+  .product_categories .category:nth-child(3) .visual {
+    left: 93px;
+    top: -66.5px;
+  }
+}
