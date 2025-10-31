@@ -1,5 +1,11 @@
+import Navbar from "@/components/layout/navbar";
+
 function App() {
-  return <div>Audiophile</div>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 }
 
 export default App;
