@@ -1,3 +1,8 @@
+.zx7_display_wrapper {
+  width: 100%;
+  max-width: 14440px;
+}
+
 .zx7_display {
   background: url("/assets/speaker-zx7.jpg");
   background-position: contain;

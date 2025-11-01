@@ -1,3 +1,8 @@
+.product_categories_wrapper {
+  width: 100%;
+  max-width: 14440px;
+}
+
 .product_categories {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

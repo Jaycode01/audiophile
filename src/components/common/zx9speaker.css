@@ -1,3 +1,8 @@
+.display_section_wrapper {
+  width: 100%;
+  max-width: 14440px;
+}
+
 .display_section {
   background-color: #d87d4a;
   width: 1110px;

@@ -4,6 +4,7 @@ import Hero from "@/components/common/hero";
 import Yx1earphone from "@/components/common/yx1earphone";
 import Zx7speaker from "@/components/common/zx7speaker";
 import Zx9Speaker from "@/components/common/zx9speaker";
+import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Zx7speaker />
       <Yx1earphone />
       <About />
+      <Footer />
     </>
   );
 }
