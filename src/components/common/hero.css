@@ -1,6 +1,7 @@
 .hero {
   background-color: #0e0e0e;
   display: flex;
+  max-width: 100%;
   flex-direction: row;
   align-items: center;
   height: 729px;
@@ -70,7 +71,7 @@
   width: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .image_content {
     display: none;
   }
@@ -88,7 +89,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 767px) {
   .text_content .heading {
     font-size: 40px;
   }

@@ -39,15 +39,26 @@
   color: #ffffff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .zx7_display {
-    /* margin-top: -70px;
-    height: 527px;
-    border-radius: 8px;
+    margin-top: 30px;
+    padding-left: 40px;
+    background: url("/assets/zx7speaker-tablet.png");
+    background-repeat: no-repeat;
     width: 90%;
-    background-size: 761px 350px; */
-    width: 90%;
-    background-position: -200px top;
     background-size: cover;
+  }
+}
+
+@media (max-width: 767px) {
+  .zx7_display {
+    height: 320px;
+    padding-left: 20px;
+    background: url("/assets/zx7speaker-mobile.jpg");
+    background-size: cover;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 15px;
+    background-repeat: no-repeat;
   }
 }
