@@ -1,3 +1,4 @@
+import About from "@/components/common/about";
 import Category from "@/components/common/category";
 import Hero from "@/components/common/hero";
 import Yx1earphone from "@/components/common/yx1earphone";
@@ -14,6 +15,7 @@ function App() {
       <Zx9Speaker />
       <Zx7speaker />
       <Yx1earphone />
+      <About />
     </>
   );
 }
