@@ -22,7 +22,9 @@ const ProductShowcase = ({
       <div className={`showcase ${reverse ? "reverse" : ""}`}>
         <div className="image_wrapper">
           <img src={desktop_image} alt={title} className="desktop_image" />
-          <img src={tablet_image} alt={title} className="tablet_image" />
+          {tablet_image && (
+            <img src={tablet_image} alt={title} className="tablet_image" />
+          )}
         </div>
         <div className="content">
           {label && <p className="label">{label}</p>}
