@@ -1,0 +1,29 @@
+.headphones_hero_wrapper {
+  background-color: #0e0e0e;
+  width: 100%;
+  max-width: 1440px;
+  height: 226px;
+}
+
+.headphones_hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: inherit;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1110px;
+  border-top: 1px solid #ffffff33;
+}
+
+.headphones_hero h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 1.43px;
+  text-transform: uppercase;
+  color: #ffffff;
+}

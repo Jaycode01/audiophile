@@ -1,13 +1,21 @@
-.hero {
+.hero_wrapper {
+  width: 100%;
+  max-width: 1440px;
   background-color: #0e0e0e;
+}
+
+.hero {
+  background-color: inherit;
   display: flex;
-  max-width: 100%;
+  max-width: 1110px;
+  width: 100%;
   flex-direction: row;
   align-items: center;
   height: 729px;
   justify-content: center;
   margin: 0 auto;
   padding: 30px 11.46%;
+  border-top: 1px solid #ffffff33;
 }
 
 .text_content {
@@ -67,7 +75,7 @@
 }
 
 .image_content img {
-  height: 729px;
+  height: 720px;
   width: auto;
 }
 

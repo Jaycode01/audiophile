@@ -1,0 +1,145 @@
+.showcase_wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin-top: 150px;
+}
+
+.showcase {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.showcase.reverse {
+  flex-direction: row-reverse;
+}
+
+.showcase .image_wrapper {
+  background-color: #f1f1f1;
+  height: 560px;
+  width: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.showcase .image_wrapper .desktop_image {
+  margin-top: 30px;
+}
+
+.showcase .image_wrapper .tablet_image {
+  display: none;
+}
+
+.showcase .content {
+  width: 445px;
+  height: 343px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content .label {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #d87d4a;
+}
+
+.content .title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 1.43px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-top: 15px;
+}
+
+.content .description {
+  font-weight: 400;
+  font-size: 15px;
+  color: #000000;
+  line-height: 25px;
+  opacity: 0.5;
+  margin-top: 20px;
+}
+
+.content > button {
+  background-color: #d87d4a;
+  width: 160px;
+  height: 48px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  font-family: inherit;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.content > button:hover {
+  background-color: #fbaf85;
+}
+
+@media (max-width: 1023px) {
+  .showcase_wrapper {
+    width: 90%;
+    margin: 100px auto;
+  }
+
+  .showcase {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .showcase.reverse {
+    flex-direction: column;
+  }
+
+  .showcase .image_wrapper {
+    width: 100%;
+    height: 352px;
+  }
+
+  .image_wrapper > img {
+    width: 220px;
+    height: auto;
+  }
+
+  .showcase .content {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: fit-content;
+    margin-top: 70px;
+  }
+
+  .content .description {
+    width: 572px;
+  }
+}
+
+@media (max-width: 767px) {
+  .showcase_wrapper {
+    margin-top: 80px;
+  }
+  .showcase .content {
+    width: 100%;
+  }
+
+  .content .description {
+    width: 100%;
+  }
+}

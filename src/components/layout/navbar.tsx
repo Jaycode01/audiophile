@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import "./navbar.css";
 
 const Navbar = () => {
@@ -18,16 +19,24 @@ const Navbar = () => {
         {menu && (
           <nav>
             <li>
-              <a href="#">Home</a>
+              <Link href="/" className="a">
+                Home
+              </Link>
             </li>
             <li>
-              <a href="#">Headphones</a>
+              <Link href="/headphones" className="a">
+                Headphones
+              </Link>
             </li>
             <li>
-              <a href="#">Speakers</a>
+              <Link href="/speakers" className="a">
+                Speakers
+              </Link>
             </li>
             <li>
-              <a href="#">Earphones</a>
+              <Link href="/earphones" className="a">
+                Earphones
+              </Link>
             </li>
           </nav>
         )}
