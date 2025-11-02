@@ -2,9 +2,9 @@ import "./showcase.css";
 
 type ProductProps = {
   desktop_image: string;
-  tablet_image: string;
+  tablet_image?: string;
   title: string;
-  label: string;
+  label?: string;
   description: string;
   reverse?: boolean;
 };
@@ -25,7 +25,7 @@ const ProductShowcase = ({
           <img src={tablet_image} alt={title} className="tablet_image" />
         </div>
         <div className="content">
-          <p className="label">{label}</p>
+          {label && <p className="label">{label}</p>}
           <h2 className="title">{title}</h2>
           <p className="description">{description}</p>
           <button type="button">See Product</button>

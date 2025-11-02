@@ -1,6 +1,6 @@
 import Navbar from "@/components/layout/navbar";
-import HPHero from "./hero";
-import ProductShowcase from "./showcase";
+import CategoryHero from "../../components/common/category_hero";
+import ProductShowcase from "../../components/common/showcase";
 import Category from "@/components/common/category";
 import About from "@/components/common/about";
 import Footer from "@/components/layout/footer";
@@ -9,7 +9,7 @@ function Headphones() {
   return (
     <>
       <Navbar />
-      <HPHero />
+      <CategoryHero category_name="Headphones" />
       <ProductShowcase
         desktop_image="/assets/headphones/xx99-mark2.png"
         tablet_image="/assets/headphones/xx99-mark2-tablet.png"
@@ -22,7 +22,6 @@ function Headphones() {
         desktop_image="/assets/headphones/xx99-mark1.png"
         tablet_image="/assets/headphones/xx99-mark1-tablet.png"
         title="XX99 Mark I Headphones"
-        label="New Product"
         description="As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go."
         reverse={true}
       />
@@ -30,7 +29,6 @@ function Headphones() {
         desktop_image="/assets/headphones/xx59.png"
         tablet_image="/assets/headphones/xx59-tablet.png"
         title="XXX59 Headphones"
-        label="New Product"
         description="Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move."
         reverse={false}
       />

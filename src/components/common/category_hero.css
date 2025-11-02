@@ -27,3 +27,9 @@
   text-transform: uppercase;
   color: #ffffff;
 }
+
+@media (max-width: 767px) {
+  .headphones_hero h1 {
+    font-size: 28px;
+  }
+}
