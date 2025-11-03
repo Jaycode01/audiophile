@@ -1,8 +1,8 @@
-// components/CartModal.tsx
 "use client";
 
 import { useCart } from "@/context/cartContext";
 import Link from "next/link";
+import "./cart_modal.css";
 
 export default function CartModal() {
   const {
@@ -19,10 +19,8 @@ export default function CartModal() {
 
   return (
     <>
-      {/* Overlay */}
       <div className="cart_overlay" onClick={closeCart}></div>
 
-      {/* Cart Modal */}
       <div className="cart_modal">
         <div className="cart_header">
           <h2>CART ({getTotalItems()})</h2>

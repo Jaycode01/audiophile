@@ -19,7 +19,9 @@ async function ProductDetails({ params }: ProductProps) {
   }
 
   // Get related products
-  const relatedProducts = products.filter((p) => p.slug !== product.slug);
+  const relatedProducts = products
+    .filter((p) => p.slug !== product.slug)
+    .slice(0, 3);
 
   // Pass data to Client Component
   return (

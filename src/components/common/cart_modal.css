@@ -1,0 +1,257 @@
+/* components/common/cartModal.css */
+
+/* Overlay - darkens background */
+.cart_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  cursor: pointer;
+}
+
+/* Cart Modal */
+.cart_modal {
+  position: fixed;
+  top: 120px; /* Adjust based on your navbar height */
+  right: 165px; /* Distance from right edge */
+  width: 377px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 32px;
+  z-index: 1000;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Cart Header */
+.cart_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.cart_header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1.29px;
+  text-transform: uppercase;
+}
+
+.remove_all {
+  font-size: 15px;
+  font-weight: 400;
+  color: #000000;
+  opacity: 0.5;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.remove_all:hover {
+  color: #d87d4a;
+  opacity: 1;
+}
+
+/* Cart Items */
+.cart_items {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 32px;
+}
+
+.empty_cart {
+  text-align: center;
+  opacity: 0.5;
+  font-size: 15px;
+  padding: 40px 0;
+}
+
+.cart_item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.cart_item:last-child {
+  margin-bottom: 0;
+}
+
+.cart_item img {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  object-fit: cover;
+  background-color: #f1f1f1;
+}
+
+.item_details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item_name {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 25px;
+}
+
+.item_price {
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.5;
+  line-height: 25px;
+}
+
+/* Quantity Controls */
+.quantity_controls {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  width: 96px;
+  height: 32px;
+  justify-content: space-between;
+}
+
+.quantity_controls button {
+  padding: 0 12px;
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 0.25;
+  cursor: pointer;
+  transition:
+    color 0.3s,
+    opacity 0.3s;
+  height: 100%;
+}
+
+.quantity_controls button:hover {
+  color: #d87d4a;
+  opacity: 1;
+}
+
+.quantity_controls span {
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Cart Footer */
+.cart_footer {
+  padding-top: 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.total span:first-child {
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.total_price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.checkout_btn {
+  width: 100%;
+  background-color: #d87d4a;
+  color: #ffffff;
+  border: none;
+  padding: 15px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Manrope";
+}
+
+.checkout_btn:hover {
+  background-color: #fbaf85;
+}
+
+/* Scrollbar styling for cart items */
+.cart_items::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cart_items::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.cart_items::-webkit-scrollbar-thumb {
+  background: #d87d4a;
+  border-radius: 3px;
+}
+
+.cart_items::-webkit-scrollbar-thumb:hover {
+  background: #fbaf85;
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+  .cart_modal {
+    right: 40px;
+    top: 120px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cart_modal {
+    right: 24px;
+    left: 24px;
+    width: auto;
+    top: 100px;
+  }
+}
+
+/* Animation - Optional but nice */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cart_modal {
+  animation: slideIn 0.3s ease-out;
+}
+
+.cart_overlay {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -7,6 +7,9 @@ import { useCart } from "@/context/cartContext";
 import type { Products } from "@/data/products";
 import "./product_details.css";
 import Navbar from "../layout/navbar";
+import Category from "./category";
+import About from "./about";
+import Footer from "../layout/footer";
 
 type Props = {
   product: Products;
@@ -49,7 +52,7 @@ export default function ProductDetailsClient({
         <section className="product_hero">
           <div className="container">
             <div className="hero_content">
-              <div className="image_container">
+              <div className="img_container">
                 <img src={product.image} alt={product.name} />
               </div>
 
@@ -147,6 +150,9 @@ export default function ProductDetailsClient({
           </div>
         </section>
       </main>
+      <Category />
+      <About />
+      <Footer />
     </>
   );
 }
