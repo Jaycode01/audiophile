@@ -1,11 +1,13 @@
 "use client";
 
+import { useCart } from "@/context/cartContext";
 import { useState } from "react";
 import Link from "next/link";
 import "./navbar.css";
 
 const Navbar = () => {
   const [menu, setmenu] = useState(true);
+  const { openCart, getTotalItems } = useCart();
 
   return (
     <section className="header_wrapper">
@@ -41,8 +43,11 @@ const Navbar = () => {
           </nav>
         )}
 
-        <button type="button" className="cta">
+        <button type="button" className="cta" onClick={openCart}>
           <img src="/assets/cart.svg" alt="cart" />
+          {getTotalItems() > 0 && (
+            <span className="cart_badge">{getTotalItems()}</span>
+          )}
         </button>
       </header>
     </section>

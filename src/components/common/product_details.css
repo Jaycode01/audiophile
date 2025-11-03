@@ -207,7 +207,6 @@
   opacity: 0.5;
 }
 
-/* Gallery Section */
 .gallery_section {
   margin-bottom: 160px;
 }
@@ -239,11 +238,13 @@
 
 .related_products {
   margin-bottom: 160px;
+  margin-top: 300px;
 }
 
 .section_title {
   font-size: 32px;
   font-weight: 700;
+  line-height: 36px;
   letter-spacing: 1.14px;
   text-transform: uppercase;
   text-align: center;

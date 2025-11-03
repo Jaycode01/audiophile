@@ -113,6 +113,7 @@ export const products: Products[] = [
       second: "/assets/speakers/gallery/zx9-two.png",
       third: "/assets/speakers/gallery/zx9-three.png",
     },
+    isNew: true,
   },
   {
     id: "5",
@@ -161,5 +162,6 @@ export const products: Products[] = [
       second: "/assets/earphones/gallery/yx1-two.png",
       third: "/assets/earphones/gallery/yx1-three.png",
     },
+    isNew: true,
   },
 ];
