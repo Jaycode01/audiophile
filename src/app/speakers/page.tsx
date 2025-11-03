@@ -4,25 +4,26 @@ import CategoryHero from "@/components/common/category_hero";
 import ProductShowcase from "@/components/common/showcase";
 import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
+import { products } from "@/data/products";
 
 function Speakers() {
+  const speakers = products.filter((p) => p.category === "speakers");
+
   return (
     <>
       <Navbar />
       <CategoryHero category_name="Speakers" />
-      <ProductShowcase
-        desktop_image="/assets/speakers/zx9.png"
-        title="ZX9 SPEAKER"
-        label="New Product"
-        description="Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups."
-        reverse={false}
-      />
-      <ProductShowcase
-        desktop_image="/assets/speakers/zx7.png"
-        title="ZX7 SPEAKER"
-        description="Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use."
-        reverse={true}
-      />
+      {speakers.map((product, index) => (
+        <ProductShowcase
+          key={product.id}
+          id={product.slug}
+          desktop_image={product.image}
+          label={product.isNew ? "NEW PRODUCT" : undefined}
+          title={product.name}
+          description={product.description}
+          reverse={index % 2 !== 0}
+        />
+      ))}
       <Category />
       <About />
       <Footer />

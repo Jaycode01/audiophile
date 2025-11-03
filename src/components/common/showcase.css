@@ -71,7 +71,7 @@
   margin-top: 20px;
 }
 
-.content > button {
+.content button {
   background-color: #d87d4a;
   width: 160px;
   height: 48px;
@@ -87,7 +87,7 @@
   transition: all 0.5s ease;
 }
 
-.content > button:hover {
+.content button:hover {
   background-color: #fbaf85;
 }
 

@@ -1,6 +1,8 @@
+import Link from "next/link";
 import "./showcase.css";
 
 type ProductProps = {
+  id: string;
   desktop_image: string;
   tablet_image?: string;
   title: string;
@@ -10,12 +12,13 @@ type ProductProps = {
 };
 
 const ProductShowcase = ({
-  desktop_image,
-  tablet_image,
+  id,
   title,
   label,
-  description,
   reverse,
+  description,
+  desktop_image,
+  tablet_image,
 }: ProductProps) => {
   return (
     <section className="showcase_wrapper">
@@ -30,7 +33,9 @@ const ProductShowcase = ({
           {label && <p className="label">{label}</p>}
           <h2 className="title">{title}</h2>
           <p className="description">{description}</p>
-          <button type="button">See Product</button>
+          <Link href={`products/${id}`}>
+            <button type="button">See Product</button>
+          </Link>
         </div>
       </div>
     </section>
