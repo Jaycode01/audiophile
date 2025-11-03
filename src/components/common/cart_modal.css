@@ -1,6 +1,3 @@
-/* components/common/cartModal.css */
-
-/* Overlay - darkens background */
 .cart_overlay {
   position: fixed;
   top: 0;
@@ -12,20 +9,20 @@
   cursor: pointer;
 }
 
-/* Cart Modal */
 .cart_modal {
   position: fixed;
-  top: 120px; /* Adjust based on your navbar height */
-  right: 165px; /* Distance from right edge */
+  top: 120px;
+  right: 230px;
   width: 377px;
+  height: fit-content;
   background-color: #ffffff;
+  font-family: "Manrope";
   border-radius: 8px;
   padding: 32px;
   z-index: 1000;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Cart Header */
 .cart_header {
   display: flex;
   justify-content: space-between;
@@ -44,20 +41,18 @@
   font-size: 15px;
   font-weight: 400;
   color: #000000;
-  opacity: 0.5;
   text-decoration: underline;
   background: none;
   border: none;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.7s;
+  font-family: inherit;
 }
 
 .remove_all:hover {
   color: #d87d4a;
-  opacity: 1;
 }
 
-/* Cart Items */
 .cart_items {
   max-height: 300px;
   overflow-y: auto;
@@ -85,6 +80,7 @@
 .cart_item img {
   width: 64px;
   height: 64px;
+  padding: 15px;
   border-radius: 8px;
   object-fit: cover;
   background-color: #f1f1f1;
@@ -111,7 +107,6 @@
   line-height: 25px;
 }
 
-/* Quantity Controls */
 .quantity_controls {
   display: flex;
   align-items: center;
@@ -146,7 +141,6 @@
   text-align: center;
 }
 
-/* Cart Footer */
 .cart_footer {
   padding-top: 24px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -191,7 +185,6 @@
   background-color: #fbaf85;
 }
 
-/* Scrollbar styling for cart items */
 .cart_items::-webkit-scrollbar {
   width: 6px;
 }
@@ -210,7 +203,6 @@
   background: #fbaf85;
 }
 
-/* Responsive */
 @media (max-width: 1023px) {
   .cart_modal {
     right: 40px;
@@ -223,11 +215,10 @@
     right: 24px;
     left: 24px;
     width: auto;
-    top: 100px;
+    top: 120px;
   }
 }
 
-/* Animation - Optional but nice */
 @keyframes slideIn {
   from {
     opacity: 0;

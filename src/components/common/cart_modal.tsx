@@ -15,6 +15,14 @@ export default function CartModal() {
     getTotalItems,
   } = useCart();
 
+  const getShortName = (name: string) => {
+    return name
+      .replace(/headphones?/gi, "")
+      .replace(/speakers?/gi, "")
+      .replace(/earphones?/gi, "")
+      .trim();
+  };
+
   if (!isCartOpen) return null;
 
   return (
@@ -37,7 +45,7 @@ export default function CartModal() {
               <div key={item.id} className="cart_item">
                 <img src={item.image} alt={item.name} />
                 <div className="item_details">
-                  <p className="item_name">{item.name}</p>
+                  <p className="item_name">{getShortName(item.name)}</p>
                   <p className="item_price">$ {item.price.toLocaleString()}</p>
                 </div>
                 <div className="quantity_controls">
