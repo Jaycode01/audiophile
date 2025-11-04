@@ -1,0 +1,376 @@
+.checkout_page {
+  min-height: 100vh;
+  max-width: 1440px;
+  background-color: #f1f1f1;
+  width: 100%;
+  font-family: "Manrope";
+}
+
+.container {
+  max-width: 1110px;
+  font-family: inherit;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.go_back {
+  display: inline-block;
+  margin-bottom: 38px;
+  font-size: 15px;
+  opacity: 0.5;
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.go_back:hover {
+  color: #d87d4a;
+  opacity: 1;
+}
+
+.checkout_content {
+  display: grid;
+  grid-template-columns: 730px 1fr;
+  gap: 30px;
+}
+
+.checkout_form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 54px 48px 48px;
+  margin-bottom: 70px;
+}
+
+.checkout_form h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 1.14px;
+  text-transform: uppercase;
+  margin-bottom: 41px;
+}
+
+.form_section {
+  margin-bottom: 53px;
+}
+
+.section_title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.93px;
+  line-height: 25px;
+  color: #d87d4a;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.form_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 16px;
+  font-size: inherit;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_group.full_width {
+  grid-column: 1 / -1;
+}
+
+.form_group label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.21px;
+  margin-bottom: 9px;
+  color: #000000;
+}
+
+.form_group input {
+  padding: 18px 24px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form_group input:focus {
+  border-color: #d87d4a;
+}
+
+.form_group input::placeholder {
+  opacity: 0.4;
+}
+
+.payment_methods {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.radio_option {
+  display: flex;
+  align-items: center;
+  padding: 18px 24px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.radio_option:hover {
+  border-color: #d87d4a;
+}
+
+.radio_option input[type="radio"] {
+  display: none;
+}
+
+.radio_custom {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+  margin-right: 16px;
+  position: relative;
+  transition: border-color 0.3s;
+}
+
+.radio_option input[type="radio"]:checked + .radio_custom {
+  border-color: #d87d4a;
+}
+
+.radio_option input[type="radio"]:checked + .radio_custom::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #d87d4a;
+  border-radius: 50%;
+}
+
+.cash_message {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.cash_message img {
+  width: 48px;
+  height: 48px;
+}
+
+.cash_message p {
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
+}
+
+.order_summary {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 32px;
+  width: 350px;
+  height: fit-content;
+  font-family: "Manrope";
+  top: 100px;
+}
+
+.order_summary h2 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1.29px;
+  text-transform: uppercase;
+  margin-bottom: 31px;
+}
+
+.summary_items {
+  margin-bottom: 32px;
+}
+
+.summary_item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.summary_item:last-child {
+  margin-bottom: 0;
+}
+
+.summary_item img {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  object-fit: cover;
+  background-color: #f1f1f1;
+}
+
+.item_info {
+  flex: 1;
+}
+
+.item_name {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 25px;
+  margin-bottom: 4px;
+}
+
+.item_price {
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+.item_quantity {
+  font-size: 15px;
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+.summary_totals {
+  margin-bottom: 32px;
+}
+
+.total_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.total_row span:first-child {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 0.5;
+}
+
+.total_row .amount {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.total_row.grand {
+  margin-top: 25px;
+}
+
+.total_row.grand .amount.highlight {
+  color: #d87d4a;
+}
+
+.pay_button {
+  width: 100%;
+  background-color: #d87d4a;
+  color: #ffffff;
+  border: none;
+  padding: 15px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Manrope";
+}
+
+.pay_button:hover {
+  background-color: #fbaf85;
+}
+
+.label_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+/* Error Message */
+.error_message {
+  font-size: 12px;
+  font-weight: 500;
+  color: #cd2c2c;
+  letter-spacing: -0.21px;
+}
+
+/* Error Input Border */
+.error_input {
+  border-color: #cd2c2c !important;
+}
+
+.error_input:focus {
+  border-color: #cd2c2c !important;
+}
+
+/* Mobile button - hidden on desktop */
+.pay_button_mobile {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+  .checkout_content {
+    grid-template-columns: 1fr;
+  }
+
+  .order_summary {
+    position: static;
+  }
+}
+
+@media (max-width: 767px) {
+  .checkout_form {
+    padding: 24px;
+  }
+
+  .checkout_form h1 {
+    font-size: 28px;
+  }
+
+  .form_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order_summary {
+    padding: 24px;
+  }
+
+  .pay_button_mobile {
+    display: block;
+    width: 100%;
+    background-color: #d87d4a;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Manrope";
+    margin-top: 32px;
+  }
+
+  .pay_button_mobile:hover {
+    background-color: #fbaf85;
+  }
+}
