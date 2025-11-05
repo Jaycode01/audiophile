@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import Link from "next/link";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import "./orderConfirmation.css";
 
 export default function OrderConfirmationPage() {
@@ -38,11 +38,13 @@ export default function OrderConfirmationPage() {
 
   if (!order) {
     return (
-      <main className="confirmation_page">
-        <div className="container">
-          <p>Loading order details...</p>
-        </div>
-      </main>
+      <Suspense fallback={<div>Loading...</div>}>
+        <main className="confirmation_page">
+          <div className="container">
+            <p>Loading order details...</p>
+          </div>
+        </main>
+      </Suspense>
     );
   }
 
